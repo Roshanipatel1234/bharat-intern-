@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roshani developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400:600:700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <nav>
+                <div class="left">Roshani's Portfolio</div>
+                <div class="right">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#About">About</a></li>
+                        <li><a href="#Services">Services</a></li>
+                        <li><a href="#Contact me">Contacts me</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-xmark" onclick="openmenu()"></i>
+                </div>
+            </nav>
+            <div class="header1">
+                <img src="C:\Users\sourabh\Desktop\images\web-developer-logo1.jpg" alt="">
+                </div>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Roshani</span><br>Patel</h1>
+            
+            <div id="About">
+                <div class="container">
+                    <div class="row">
+                        <div class="About-col-1">
+                            <img src="C:\Users\sourabh\Desktop\images\photo3.jpg" alt="">
+                        </div>
+                        <div class="About-col-2">
+                            <h1 class="sub-titles"><u>About Me</u></h1>
+                            <p>Thanks for your interest, here
+                                is a quick story of me and this website.
+                                <br>
+                                Interested in the role of a software engineer where i contribute my analytical 
+                                skills and knowledge acquired  by Pursuing my degree. Looking for a dynamic and progressive company
+                                where my skills are Utilized in the maximum way possible.
+                                <hr color="black"><br>
+                                This website is basically one on my Web Development project which is
+                                built using HTMLand css only.Here one can also find ideas for
+                                projects in different languages.
+                                Thanks again for reading this,
+                                because of people like you, it
+                                exists and prospers!
+                            </p>
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+                                <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="skils">
+                                <ul>
+                                    <li><span>HTML</span><br> Creating web pages</li>
+                                    <li><span>CSS</span><br>designing web pages</li>
+                                    <li><span>Java Script</span><br>Beginner</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="Education">
+                                <ul>
+                                    <li><span>2017</span><br>Passed 10th with 82.40%</li>
+                                    <li><span>2019</span><br>Passed 12th with 62%</li>
+                                    <li><span>2022</span><br> Passed Diploma with 94.85%</li>
+                                    <li><span>2023</span><br>Pursuing in B.Tech</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------------------------------------------------services-------->
+    <br>
+    <div id="Services">
+        <div class="container">
+            <h1 class="sub-title"><u>My Skills:</u></h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-js"></i>
+                    <i class="fa-brands fa-js"></i>
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <h2>Html CSS Java Script</h2>
+                    <img src="C:\Users\sourabh\Desktop\images\1499794874html5-js-css3-logo1-png.png" alt="">
+                    <p>Good understanding of this languages</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------------contact----------->
+    <br>
+    <div id="Contact me">
+        <div class="container">
+            <div class="row">
+                
+                    <div class="contact-right">
+                <h1>Other Details</h1>
+                        <form>
+                            <input type="text" Name="Name" placeholder="Your Name" required>
+                            <input type="email" Name="email" placeholder="Your email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="Copyright">
+                <p>Copyright @ Roshani Patel <i class="fa-solid fa-heart"></i></p>
+            </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname) {
+                for (tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for (tabcontents of tabcontents) {
+                    tabcontents.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+
+            function openmenu() {
+                sidemenu.style.right = "0";
+            }
+            function closemenu() {
+                sidemenu.style.right = "-200px";
+            }
+        </script>
+</body>
+
+</html>
